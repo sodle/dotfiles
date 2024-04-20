@@ -1,14 +1,9 @@
-# Local binaries
-export PATH="$HOME/.local/bin:$PATH"
+# Load configs from directory
+for file in ${ZDOTDIR:-HOME}/config/*.zsh(N); do
+  source "$file"
+done
 
-# Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
-
-# Cargo
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
+# Load local configs if any
+for file in ${ZDOTDIR:-HOME}/local/*.zsh(N); do
+  source "$file"
+done
