@@ -21,3 +21,8 @@ Personal configurations for Alacritty, zsh, tmux, and LunarVim
     # ZSH config path
     export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
     ```
+
+## ZSH configs
+`.config/zsh/.zshrc` loads configs in alphabetical order from `.config/zsh/config`. Files in this directory are tracked by git.
+
+If you have local configs that you don't want committed (such as an API token or proprietary work stuff), put it in `.config/zsh/local`.
