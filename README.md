@@ -6,12 +6,19 @@ Personal configurations for Alacritty, zsh, tmux, and LunarVim
 * zsh
 * tmux
 * LunarVim ([setup instructions](https://www.lunarvim.org/docs/installation))
-* pyenv
+* pyenv and pyenv-virtualenv
 * [Meslo NerdFont](https://www.nerdfonts.com/font-downloads)
 
 ## Setup
 1. Clone repo to `~/.config`
-2. Create `~/.zshenv`:
+2. Set up Python dependencies for lvim
+    ```bash
+    pyenv install 3.12
+    pyenv virtualenv 3.12 nvim
+    pyenv shell nvim
+    pyenv install neovim
+    ```
+3. Create `~/.zshenv`:
     ```bash
     # Set up config paths
     export XDG_CONFIG_HOME="$HOME/.config"
