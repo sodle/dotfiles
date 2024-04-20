@@ -3,7 +3,7 @@ Personal configurations for Alacritty, zsh, tmux, and LunarVim
 
 ## Requirements
 * Alacritty (`brew install alacritty`)
-* zsh
+* zsh and zsh-completions
 * tmux
 * LunarVim ([setup instructions](https://www.lunarvim.org/docs/installation))
 * pyenv and pyenv-virtualenv

@@ -1,6 +1,7 @@
-# Homebrew shell completions
+# Homebrew and zsh-completions shell completions
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
 fi
 
 autoload -U compinit; compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
