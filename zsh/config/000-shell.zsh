@@ -23,6 +23,6 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
-# Colorized grep by default
-alias grep="grep -P -i --color=auto"
+# Colorized, case-insensitive grep by default
+alias grep="grep -i --color=auto"
 
