@@ -7,6 +7,10 @@ function tmuxa() {
   tmux new-session -A -s $name
 }
 
+# Open a directory in LunarVim, with a terminal in the pane below
+# If already in a Tmux session, this opens in a new window in the same session
+# Else, it opens in a new session
+# Optionally specify a window name as the second arg, else it uses the directory name
 function workon() {
   workdir=$1
   name=$2
