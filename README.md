@@ -16,7 +16,7 @@ Personal configurations for Alacritty, zsh, tmux, and LunarVim
     pyenv install 3.12
     pyenv virtualenv 3.12 nvim
     pyenv shell nvim
-    pyenv install neovim
+    pip install neovim
     ```
 3. Create `~/.zshenv`:
     ```bash
