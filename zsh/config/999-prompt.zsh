@@ -109,9 +109,9 @@ prompt_pyenv() {
   PYENV_SHELL_ENV=$(pyenv shell 2>/dev/null)
   PYENV_LOCAL_ENV=$(pyenv local 2>/dev/null)
   if [[ -n $PYENV_SHELL_ENV ]]; then
-    echo "%F{magenta}(🐍 $PYENV_SHELL_ENV)%f "
+    echo "%F{magenta}(🐍🐚 $PYENV_SHELL_ENV)%f "
   elif [[ -n $PYENV_LOCAL_ENV ]]; then
-    echo "%F{magenta}(🐍 $PYENV_LOCAL_ENV)%f "
+    echo "%F{magenta}(🐍📂 $PYENV_LOCAL_ENV)%f "
   fi
 }
 
