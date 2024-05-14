@@ -18,9 +18,15 @@ lvim.plugins = {
     },
     opts = {
       keymaps = {
-        goto_location = {"<CR>", "<LeftRelease>"},
+        goto_location = { "<CR>", "<LeftRelease>" },
       }
     },
+  },
+  {
+    "nvimdev/guard.nvim",
+    dependencies = {
+      "nvimdev/guard-collection",
+    }
   },
 }
 
@@ -29,5 +35,14 @@ lvim.builtin.nvimtree.setup.view.width = 37
 local function open_nvim_tree()
   require("nvim-tree.api").tree.open()
 end
-vim.api.nvim_create_autocmd({"VimEnter"}, {callback=open_nvim_tree})
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
+local ft = require('guard.filetype')
+
+ft('python'):fmt('black')
+    :lint('pylint')
+
+require('guard').setup({
+  -- fmt_on_save = true,
+  -- lsp_as_default_formatter = true,
+})
