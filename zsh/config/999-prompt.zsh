@@ -115,6 +115,16 @@ prompt_pyenv() {
   fi
 }
 
+function zle-line-init zle-keymap-select {
+  case ${KEYMAP} in
+    (vicmd) LINE_MODE_PROMPT="🔧 " ;;
+    (*)     LINE_MODE_PROMPT="" ;;
+  esac
+  zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 prompt_purification_setup() {
     # Display git branch
 
@@ -134,7 +144,7 @@ prompt_purification_setup() {
 
     prompt_git_branch
     RPROMPT='$(prompt_git_info) $(git_prompt_status) %(?.. %F{yellow}[%?]%f)'
-    PROMPT=$'$(prompt_pyenv)%F{white}%~ %B%F{blue}%n>%f%b '
+    PROMPT=$'${LINE_MODE_PROMPT}$(prompt_pyenv)%F{white}%~ %B%F{blue}%n>%f%b '
 }
 
 prompt_purification_setup
