@@ -1,6 +1,7 @@
+# emacs: emacs, duh
+# viins: vi mode, start in insert
+# vicmd: vi mode, start in normal/command mode
 KEYMAP=viins
-
-# Emacs keybinds
 bindkey -A $KEYMAP main
 
 if [[ $KEYMAP == "emacs" ]]; then
