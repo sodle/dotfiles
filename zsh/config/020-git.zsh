@@ -22,3 +22,7 @@ alias gl='git log --oneline'
 alias gll='git log'
 alias grs='git remote show'
 alias glol='git log --graph --abbrev-commit --oneline --decorate'
+
+function gi() { 
+  curl -sLw "\\n" https://www.toptal.com/developers/gitignore/api/$@ ;
+}
