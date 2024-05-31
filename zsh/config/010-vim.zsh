@@ -1,9 +1,11 @@
-# Set LunarVim as default editor
-export EDITOR="lvim"
-export VISUAL="lvim"
+# Set NeoVim as default editor
+export EDITOR="nvim"
+export VISUAL="nvim"
 
-# v, vi, vim, nvim all launch lvim
-alias v=lvim
-alias vi=lvim
-alias vim=lvim
-alias nvim=lvim
+# LazyVim is my hotness this week
+export NVIM_APPNAME="lazyvim"
+
+# v, vi, vim all launch nvim
+alias v=nvim
+alias vi=nvim
+alias vim=nvim

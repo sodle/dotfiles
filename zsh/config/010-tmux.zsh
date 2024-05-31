@@ -28,7 +28,7 @@ function workon() {
     window_id=$(tmux new-window -n $name -dPF '#{window_id}')
   fi
 
-  tmux send-keys -t $window_id "cd $abs" Enter "v" Enter
+  tmux send-keys -t $window_id "cd $abs" Enter 'VIRTUAL_ENV=`pyenv which python` v' Enter
   pane_id=$(tmux split-window -t $window_id -vl 8 -PF '#{pane_id}')
   tmux send-keys -t $pane_id "cd $abs" Enter
 
