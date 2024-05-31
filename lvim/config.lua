@@ -39,7 +39,7 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
 local ft = require('guard.filetype')
 
-ft('python'):fmt('black')
+ft('python')--:fmt('black')
     :lint('pylint')
 
 require('guard').setup({

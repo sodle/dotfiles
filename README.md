@@ -8,6 +8,7 @@ Personal configurations for Alacritty, zsh, tmux, and LunarVim
 * LunarVim ([setup instructions](https://www.lunarvim.org/docs/installation))
 * pyenv and pyenv-virtualenv
 * [Meslo NerdFont](https://www.nerdfonts.com/font-downloads)
+* If you want fortunes at startup: `fortune` and optionally `cowsay` and `lolcat`.
 
 ## Setup
 1. Clone repo to `~/.config`
