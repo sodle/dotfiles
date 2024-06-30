@@ -12,11 +12,11 @@ function tmuxa() {
 # Else, it opens in a new session
 # Optionally specify a window name as the second arg, else it uses the directory name
 function workon() {
-  workdir=$1
-  name=$2
-  abs=$(realpath $workdir)
-  base=$(basename $abs)
-  name=${name:-$base}
+  workdir="$1"
+  name="$2"
+  abs="$(realpath "$workdir")"
+  base="$(basename "$abs")"
+  name="${name:-$base}"
 
   if [[ -z $TMUX ]]; then
     # not in tmux, start it up
@@ -28,9 +28,9 @@ function workon() {
     window_id=$(tmux new-window -n $name -dPF '#{window_id}')
   fi
 
-  tmux send-keys -t $window_id "cd $abs" Enter 'VIRTUAL_ENV=`pyenv which python` v' Enter
+  tmux send-keys -t $window_id "cd \"$abs\"" Enter 'VIRTUAL_ENV=`pyenv which python` v' Enter
   pane_id=$(tmux split-window -t $window_id -vl 8 -PF '#{pane_id}')
-  tmux send-keys -t $pane_id "cd $abs" Enter
+  tmux send-keys -t $pane_id "cd \"$abs\"" Enter
 
   if [[ -z $session_id ]]; then
     tmux select-window -t $window_id
