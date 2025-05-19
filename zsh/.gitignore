@@ -1,2 +1,5 @@
 local/*
 !local/.gitkeep
+
+.zsh_history
+.zhistory
