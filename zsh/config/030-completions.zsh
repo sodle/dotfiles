@@ -39,3 +39,8 @@ unsetopt FLOW_CONTROL       # Disable start/stop characters in shell editor.
 # Partial path component completion
 zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 setopt CASE_GLOB
+
+# Docker
+fpath=("$HOME/.docker/completions" $fpath)
+autoload -Uz compinit
+compinit

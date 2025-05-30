@@ -3,3 +3,5 @@ local/*
 
 .zsh_history
 .zhistory
+
+.zcompdump
