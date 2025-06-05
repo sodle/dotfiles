@@ -19,3 +19,6 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 export PATH="${XDG_CONFIG_HOME}/local/bin:$PATH"
 alias uvr="uv run"
 alias uvm="uv run ./manage.py"
+
+# Ruby/rbenv
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
