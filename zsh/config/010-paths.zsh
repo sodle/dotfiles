@@ -22,3 +22,6 @@ alias uvm="uv run ./manage.py"
 
 # Ruby/rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+
+# Bitwarden SSH agent
+export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
