@@ -24,5 +24,9 @@ function rprompt_git() {
 
 # Left prompt
 setopt PROMPT_SUBST
-PROMPT='%F{cyan}%~%f %F{magenta}(%n)%f %F{white}›%f '
+if [[ -n "$SSH_CONNECTION" ]]; then
+    PROMPT='%F{cyan}%~%f %F{magenta}(%n@%m)%f %F{white}›%f '
+else
+    PROMPT='%F{cyan}%~%f %F{magenta}(%n)%f %F{white}›%f '
+fi
 RPROMPT='$(rprompt_git)'
