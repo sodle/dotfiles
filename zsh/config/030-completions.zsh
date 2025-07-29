@@ -4,6 +4,12 @@ if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
 fi
 
+# Docker
+fpath=("$HOME/.docker/completions" $fpath)
+
+# Other stuff in ~/.zfunc
+fpath=("$HOME/.zfunc" $fpath)
+
 autoload -U compinit; compinit -d "$XDG_CACHE_HOME/zsh/.zcompdump"
 
 # Enable completers
@@ -40,7 +46,4 @@ unsetopt FLOW_CONTROL       # Disable start/stop characters in shell editor.
 zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 setopt CASE_GLOB
 
-# Docker
-fpath=("$HOME/.docker/completions" $fpath)
-autoload -Uz compinit
 compinit
