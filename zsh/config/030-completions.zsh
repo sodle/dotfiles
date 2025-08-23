@@ -47,3 +47,6 @@ zstyle ':completion:*' matcher-list 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 setopt CASE_GLOB
 
 compinit
+
+# k8s
+source <(kubectl completion zsh)
