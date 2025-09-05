@@ -1,6 +1,9 @@
 # Local binaries
 export PATH="$HOME/.local/bin:$PATH"
 
+# snaps
+export PATH="/snap/bin:$PATH"
+
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 
@@ -13,6 +16,7 @@ export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
 
 # FNM (NodeJS)
+export PATH="${XDG_DATA_HOME}/fnm:$PATH"
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 # uv (Python)
