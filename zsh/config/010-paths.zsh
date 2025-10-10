@@ -33,3 +33,6 @@ export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwa
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+
+# Flutter
+export PATH="$HOME/flutter/flutter/bin:$PATH"
