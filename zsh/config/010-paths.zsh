@@ -35,4 +35,4 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
 
 # Flutter
-export PATH="$HOME/flutter/flutter/bin:$PATH"
+export PATH="$HOME/flutter/flutter/bin:$HOME/.pub-cache/bin:$PATH"
