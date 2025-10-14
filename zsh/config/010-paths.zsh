@@ -34,7 +34,9 @@ fi
 
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
-export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+if [ -d "$ANDROID_HOME" ]; then
+    export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+fi
 
 # Flutter
 export PATH="$HOME/flutter/flutter/bin:$HOME/.pub-cache/bin:$PATH"
