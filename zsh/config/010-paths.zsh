@@ -28,7 +28,9 @@ alias uvm="uv run ./manage.py"
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 
 # Bitwarden SSH agent
-export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+if [ -d "$HOME/Library/Containers/com.bitwarden.desktop" ]; then
+    export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+fi
 
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
