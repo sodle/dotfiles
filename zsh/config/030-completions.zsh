@@ -50,3 +50,6 @@ compinit
 
 # k8s
 source <(kubectl completion zsh)
+
+# uv
+eval "$(uv generate-shell-completion zsh)"
