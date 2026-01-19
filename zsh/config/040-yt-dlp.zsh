@@ -1,0 +1,1 @@
+alias ytd='yt-dlp --remote-components ejs:github --cookies-from-browser firefox '
