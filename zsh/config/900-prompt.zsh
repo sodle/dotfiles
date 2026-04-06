@@ -1,5 +1,6 @@
 # Colors
 autoload -U colors && colors
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 
 # Helper: Git branch and status
 function prompt_git_info() {
@@ -29,4 +30,5 @@ if [[ -n "$SSH_CONNECTION" ]]; then
 else
     PROMPT='%F{cyan}%~%f %F{magenta}(%n)%f %F{white}›%f '
 fi
+PROMPT='$(kube_ps1)'" $PROMPT"
 RPROMPT='$(rprompt_git)'
