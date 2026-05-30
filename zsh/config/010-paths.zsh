@@ -15,9 +15,10 @@ source "$HOME/.cargo/env"
 export GOPATH="$HOME/src/go"
 export PATH="$GOPATH/bin:$PATH"
 
-# FNM (NodeJS)
-export PATH="${XDG_DATA_HOME}/fnm:$PATH"
-eval "$(fnm env --use-on-cd --shell zsh)"
+# nvm (NodeJS)
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # uv (Python)
 export PATH="${XDG_CONFIG_HOME}/local/bin:$PATH"
@@ -26,11 +27,6 @@ alias uvm="uv run ./manage.py"
 
 # Ruby/rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
-
-# Bitwarden SSH agent
-if [ -d "$HOME/Library/Containers/com.bitwarden.desktop" ]; then
-    export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
-fi
 
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
