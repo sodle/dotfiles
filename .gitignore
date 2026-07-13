@@ -9,3 +9,6 @@
 !nvim/
 !nvim/**/*
 
+!git/
+!git/**/*
+
