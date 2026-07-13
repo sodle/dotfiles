@@ -49,7 +49,9 @@ setopt CASE_GLOB
 compinit
 
 # k8s
-source <(kubectl completion zsh)
+if type kubectl > /dev/null; then
+  source <(kubectl completion zsh)
+fi
 
 # uv
 eval "$(uv generate-shell-completion zsh)"

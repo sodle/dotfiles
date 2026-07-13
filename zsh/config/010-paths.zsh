@@ -9,7 +9,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
-source "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
+fi
 
 # Go
 export GOPATH="$HOME/src/go"
@@ -31,7 +33,7 @@ export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 if [ -d "$ANDROID_HOME" ]; then
-    export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+  export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
 fi
 
 # Flutter
