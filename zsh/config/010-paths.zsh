@@ -38,3 +38,6 @@ fi
 
 # Flutter
 export PATH="$HOME/flutter/flutter/bin:$HOME/.pub-cache/bin:$PATH"
+
+# Doom Emacs
+[ -d "$XDG_CONFIG_HOME/emacs/bin" ] && PATH="$XDG_CONFIG_HOME/emacs/bin:$PATH"
