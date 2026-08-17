@@ -32,7 +32,7 @@ export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
-if [ -d "$ANDROID_HOME" ]; then
+if [ -d "$ANDROID_HOME/ndk" ]; then
   export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
 fi
 
