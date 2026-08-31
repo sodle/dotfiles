@@ -3,3 +3,5 @@
 # Please adapt and uncomment the following lines:
 	name = Scott Odle
 	email = scott@sjodle.com
+[core]
+	autocrlf = input
