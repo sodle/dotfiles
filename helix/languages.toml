@@ -3,6 +3,28 @@ name = "python"
 scope = "source.python"
 file-types = ["py"]
 # comment-tokens = "#"
-indent = { tab-width = 2, unit = " " }
+indent = { tab-width = 4, unit = " " }
 formatter = { command = "ruff", args = [ "format", "-" ] }
 language-servers = [ "ty" ]
+auto-format = true
+
+[[language]]
+name = "djangohtml"
+scope = "source.html"
+file-types = ["html"]
+language-servers = [ "djlsp" ]
+auto-format = true
+
+[[language]]
+name = "html"
+scope = "source.html"
+file-types = ["html"]
+language-servers = [ "superhtml" ]
+auto-format = true
+
+[[language]]
+name = "toml"
+scope = "source.toml"
+file-types = ["toml"]
+auto-format = true
+
