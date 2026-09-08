@@ -1,0 +1,8 @@
+[[language]]
+name = "python"
+scope = "source.python"
+file-types = ["py"]
+# comment-tokens = "#"
+indent = { tab-width = 2, unit = " " }
+formatter = { command = "ruff", args = [ "format", "-" ] }
+language-servers = [ "ty" ]

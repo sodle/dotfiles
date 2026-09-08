@@ -14,3 +14,7 @@
 
 !doom/
 !doom/**/*
+
+!helix/
+!helix/**/*
+
