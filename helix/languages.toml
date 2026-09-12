@@ -16,13 +16,6 @@ language-servers = [ "djlsp" ]
 auto-format = true
 
 [[language]]
-name = "html"
-scope = "source.html"
-file-types = ["html"]
-language-servers = [ "superhtml" ]
-auto-format = true
-
-[[language]]
 name = "toml"
 scope = "source.toml"
 file-types = ["toml"]
